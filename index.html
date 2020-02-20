@@ -29,23 +29,51 @@
         <p><a href="https://en.wikipedia.org/wiki/Tree"><img src="images/tree.jpg" alt="A tree."></a></p>
         
         <h4 id="links-header">Links to stuff I enjoy. 4</h4>
-        <ul>
+        <ul> <!--unordered list-->
             <li><a target="_blank" href="http://www.nfl.com">NFL.com</a></li>
             <li><a target="_blank" href="http://www.espn.com">ESPN.com</a></li>
             <li><a target="_blank" href="http://www.sporcle.com">Sporcle Trivia</a></li>
         </ul>
 
         <h4>My top things</h4>
-        <ol> <!--ordered list-->
+        <ol> <!--ordered list"-->
             <li>Carrie</li>
+            <li>Camille</li>
             <li>Panthers</li>
             <li>Pirates</li>
-            <li>Camille</li>
         </ol>
 
-    <input type="text" placeholder="Your name here.">
-    <!--this creates a line to enter text-->
+    <form action="#">
+        <input type="text" placeholder="First Name"> <input type="text" placeholder="Last Name">
+        <p><input type="text" required placeholder="City"> <input type="text" placeholder="State"></p>
+        <p><button type="submit">Send the information!</button></p>
+        <!--Use p tag to create new line for form fields and button-->
+    </form>  
+   
+    <!--RADIO BUTTON AREA-->
+    <form action="#">
+    <h5><p>Choose your favorite mammal!</p></h5>
+    <p><label for="dog">
+       <input id="dog" type="radio" name="mammals">Dog</label></p>
+    <p><label for="cat">
+        <input id="cat" type="radio" name="mammals">Cat</label></p>
+    <p><label for="whale">
+        <input id="whale" type="radio" name="mammals">Whale</label></p>
+    <p><button type="submit">Choose!</button></p>
+    </form>
 
+    <form action="#">
+    <h5><p>What foods do you enjoy?</p></h5>
+    <p><label for="pizza">
+        <input id="pizza" type="checkbox" name="foods">Pizza</label></p>
+    <p><label for="hamburgers">
+        <input id="hambrgers" type="checkbox" name="foods">Hamburgers</label></p>
+    <p><label for="sushi">
+        <input id="sushi" type="checkbox" name="foods">Sushi</label></p>
+    <p><label for="avocado">
+        <input id="avocado" type="checkbox" name="foods">Avocado</label></p>
+    <p><button type="submit">Yum!</button></p>
+    </form>
 
     </main>
 </html>
