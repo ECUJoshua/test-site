@@ -7,7 +7,18 @@
     </main> -->
 
     <header>MY FIRST WEBPAGE (header)</header>
+    <body>
     <h1>Welcome to my first attempt at making a webpage. 1</h1>
+    
+    <nav> <!--Navigation Bar-->
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>  
+    </nav>
+    
+    <div>
     <h2>This is a subheading. 2</h2>
     <main>
          <p>This is a paragraph. While simply text, this is only the beginning of a longer item. As I keep typing, I don't know how long the text can go before it wraps here.
@@ -24,7 +35,7 @@
         </p>
 
         <p>This <a href="#">link</a> is dead, so I can make it go somewhere later.</p>
-        
+        </div>
         <h3> Another picture, this time as a link!</h3>
         <p><a href="https://en.wikipedia.org/wiki/Tree"><img src="images/tree.jpg" alt="A tree."></a></p>
         
@@ -51,29 +62,33 @@
     </form>  
    
     <!--RADIO BUTTON AREA-->
+    <!--Add value to identify choice. mammals=dog, etc.-->
     <form action="#">
     <h5><p>Choose your favorite mammal!</p></h5>
     <p><label for="dog">
-       <input id="dog" type="radio" name="mammals">Dog</label></p>
+       <input id="dog" value="dog" type="radio" name="mammals" checked>Dog</label></p>
     <p><label for="cat">
-        <input id="cat" type="radio" name="mammals">Cat</label></p>
+        <input id="cat" value="cat" type="radio" name="mammals">Cat</label></p>
     <p><label for="whale">
-        <input id="whale" type="radio" name="mammals">Whale</label></p>
+        <input id="whale" value="whale" type="radio" name="mammals">Whale</label></p>
     <p><button type="submit">Choose!</button></p>
     </form>
 
-    <form action="#"> <!--Figure out where to put info-->
+    <!--CHECKBOXES-->
+    <!--Add value to identify choice! foods=pizza, sushi  etc.-->
+    <form action="#"> <!--Figure out where to send info-->
     <h5><p>What foods do you enjoy?</p></h5>
     <p><label for="pizza">
-        <input id="pizza" type="checkbox" name="foods">Pizza</label></p>
+        <input id="pizza" value="pizza" type="checkbox" name="foods" checked>Pizza</label></p>
     <p><label for="hamburgers">
-        <input id="hambrgers" type="checkbox" name="foods">Hamburgers</label></p>
+        <input id="hambrgers" value="hamburgers" type="checkbox" name="foods">Hamburgers</label></p>
     <p><label for="sushi">
-        <input id="sushi" type="checkbox" name="foods">Sushi</label></p>
+        <input id="sushi" value="sushi" type="checkbox" name="foods">Sushi</label></p>
     <p><label for="avocado">
-        <input id="avocado" type="checkbox" name="foods">Avocado</label></p>
+        <input id="avocado" value="avocado" type="checkbox" name="foods">Avocado</label></p>
     <p><button type="submit">Yum!</button></p>
     </form>
 
     </main>
+</body>
 </html>
