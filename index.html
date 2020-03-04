@@ -4,13 +4,32 @@
     <head>
         <meta charset="utf-8">
         <title>Josh's First Webpage</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap" rel="stylesheet"> 
+
     </head>
 
     <style>
-        h2 {color:lawngreen;}
+        /* TEXT */       /* use this formatting for commenting style!! */
+        h2 {color:green;}
         h3 {color: red;}
-        h4 {color:slateblue;}
+        h4 {color:slateblue; font-family: 'Oxanium', 'courier new'; font-size: 18px;}
         .power-text {color:sienna}
+        p {font-size: 12px; font-family: 'courier new';} 
+
+        /* IMAGES */
+        .small-image {width: 100px; height: 200px;}
+        .scale-image {width: 25%; height: 25%;}
+
+        /* STYLING */ 
+        .thin-border {
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+            border-radius: 5px;} /* border radius can be 50% to make a circle. */ 
+                                 /* Great for making picutres as a nav bar or meet staff */
+        
+        
+            
     
     
     </style>
@@ -19,6 +38,7 @@
 
     <header><strong>MY FIRST WEBPAGE (header)</strong></header>
     <h1 style="color: purple;">Welcome to my first attempt at making a webpage. 1</h1>
+    
     <!--Navigation Bar  **needs CSS**
     <nav> 
       <ul>
@@ -36,7 +56,7 @@
     </article>
     
         <h3>Another subheading, a picture. 3</h3>
-        <img src="images/harperdog.jpg" alt="Dog looks like Harper">
+        <img class="thin-border" src="images/harperdog.jpg" alt="Dog looks like Harper">
 
         <p>Continuing along, there is plenty to think about as I craft more of this page.
             The text elements are coming along nicely. The elements update because the text editor creates the close element item tab thing. <a href="http://www.panthers.com">Here</a> is a link to the Panthers webpage.
@@ -49,7 +69,7 @@
 
          <!--Picture link-->
         <h3> Another picture, this time as a link!</h3>
-        <p><a href="https://en.wikipedia.org/wiki/Tree"><img src="images/tree.jpg" alt="A tree."></a></p>
+        <p><a href="https://en.wikipedia.org/wiki/Tree"><img class="thin-border scale-image" src="images/tree.jpg" alt="A tree."></a></p>
         
         <h4 id="links-header">Links to stuff I enjoy. 4</h4>
         <ul> <!--unordered list-->
@@ -100,6 +120,11 @@
         <input id="avocado" value="avocado" type="checkbox" name="foods">Avocado</label></p>
     <p><button type="submit">Yum!</button></p>
     </form>
+
+    <!--
+    <p>Here is an attempt to resize my picture from Lambeau Field.</p>
+    <img class="small-image" src="images/lambeaupan.jpg" alt="Panorama of Lambeau Field">
+    -->
 
     </main>
 </body>
