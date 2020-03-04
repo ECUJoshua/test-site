@@ -11,7 +11,7 @@
     <style>
         /* TEXT */       /* use this formatting for commenting style!! */
         h2 {color:green;}
-        h3 {color: red;}
+        h3 {color: palevioletred;}
         h4 {color:slateblue; font-family: 'Oxanium', 'courier new'; font-size: 18px;}
         .power-text {color:sienna}
         p {font-size: 12px; font-family: 'courier new';} 
@@ -23,10 +23,42 @@
         /* STYLING */ 
         .thin-border {
             border-color: black;
-            border-width: 5px;
+            border-width: 1px; /* Nice thin border */
             border-style: solid;
-            border-radius: 5px;} /* border radius can be 50% to make a circle. */ 
-                                 /* Great for making picutres as a nav bar or meet staff */
+            border-radius: 1px;} 
+            /* border radius can be 50% to make circle. */ 
+            /* Great for making picutres as a nav bar or meet staff, etc */
+
+        .soft-background {background-color:rgb(167, 165, 165)}
+
+        /* ID manipulation */
+        #header {
+            background-color: purple;
+            color: gold;
+            padding: 20px;
+            text-align: center;
+            font-size: 32px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
+
+        #article-1 {
+            color: yellow;
+            background-color: orangered;
+            text-align: right;
+            margin-bottom: -10px;
+            }
+
+        #dog-picture {
+            background-color: royalblue;
+            text-align:center;
+            margin-top: -10px;
+            padding-top: 2px;
+            padding-right: 2px;
+            }
+        #dogpic {
+            border-width: 5px;
+            border-radius: 5px;
+            border-color: peachpuff;
+        }
         
         
             
@@ -36,7 +68,7 @@
 
     <body>
 
-    <header><strong>MY FIRST WEBPAGE (header)</strong></header>
+    <header id="header"><strong>MY FIRST WEBPAGE (header)</strong></header>
     <h1 style="color: purple;">Welcome to my first attempt at making a webpage. 1</h1>
     
     <!--Navigation Bar  **needs CSS**
@@ -45,18 +77,21 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Locations</a></li>
         <li><a href="#">Contact Us</a></li>
+        <li><a href="#links">Links</a></li>
       </ul>  
     </nav>-->
     
-    <article>
-        <h2>This is a subheading. 2</h2>
+    <article id="article-1">
+        <h2 id="article-1-title">This is a subheading. 2</h2>
          <p>This is a paragraph. While simply text, this is only the beginning of a longer item. As I keep typing, I don't know how long the text can go before it wraps here.
-        This is a new line that I manually (/n) added. The text continues. I can keep typing and use the enter key to keep the text inside my editor window, but it will display as a block of text on the page. <i>Word Wrap</i> Also, head on down to the <a href="#links-header">Links section</a> below!
+        This is a new line that I manually (/n) added. The text continues. I can keep typing and use the enter key to keep the text inside my editor window, but it will display as a block of text on the page. <em>Word Wrap</em> Also, head on down to the <a href="#links">Links section</a> below!
         </p>
     </article>
     
-        <h3>Another subheading, a picture. 3</h3>
-        <img class="thin-border" src="images/harperdog.jpg" alt="Dog looks like Harper">
+    <div id="dog-picture">
+        <h3 id="dog-picture-title">Another subheading, a picture. 3</h3>
+        <img id="dogpic" class="thin-border" src="images/harperdog.jpg" alt="Dog looks like Harper">
+    </div>
 
         <p>Continuing along, there is plenty to think about as I craft more of this page.
             The text elements are coming along nicely. The elements update because the text editor creates the close element item tab thing. <a href="http://www.panthers.com">Here</a> is a link to the Panthers webpage.
@@ -68,17 +103,17 @@
         </div>
 
          <!--Picture link-->
-        <h3> Another picture, this time as a link!</h3>
+        <h3 id="picture-link"> Another picture, this time as a link!</h3>
         <p><a href="https://en.wikipedia.org/wiki/Tree"><img class="thin-border scale-image" src="images/tree.jpg" alt="A tree."></a></p>
         
-        <h4 id="links-header">Links to stuff I enjoy. 4</h4>
+        <h4 id="links">Links to stuff I enjoy. 4</h4>
         <ul> <!--unordered list-->
             <li><a target="_blank" href="http://www.nfl.com">NFL.com</a></li>
             <li><a target="_blank" href="http://www.espn.com">ESPN.com</a></li>
             <li><a target="_blank" href="http://www.sporcle.com">Sporcle Trivia</a></li>
         </ul>
 
-        <h4>My top things</h4>
+        <h4 id="top-things">My top things</h4>
         <ol> <!--ordered list"-->
             <li class="power-text"><strong>Carrie</strong></li>
             <li class="power-text"><em>Camille</em></li>
@@ -86,7 +121,7 @@
             <li>Pirates</li>
         </ol>
 
-    <form action="#">
+    <form id="personal-info-form" action="#">
         <input type="text" placeholder="First Name"> <input type="text" placeholder="Last Name">
         <p><input type="text" required placeholder="City"> <input type="text" placeholder="State"></p>
         <p><button type="submit">Send the information!</button></p>
@@ -95,7 +130,7 @@
    
     <!--RADIO BUTTON AREA-->
     <!--Add value to identify choice. mammals=dog, etc.-->
-    <form action="#">
+    <form id="mammal-form" action="#">
     <h5><p>Choose your favorite mammal!</p></h5>
     <p><label for="dog">
        <input id="dog" value="dog" type="radio" name="mammals" checked>Dog</label></p>
@@ -108,7 +143,7 @@
 
     <!--CHECKBOXES-->
     <!--Add value to identify choice! foods=pizza, sushi  etc.-->
-    <form action="#"> <!--Figure out where to send info-->
+    <form id="food-form" action="#"> <!--Figure out where to send info-->
     <h5><p>What foods do you enjoy?</p></h5>
     <p><label for="pizza">
         <input id="pizza" value="pizza" type="checkbox" name="foods" checked>Pizza</label></p>
