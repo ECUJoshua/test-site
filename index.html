@@ -9,6 +9,13 @@
     </head>
 
     <style>
+
+        :root {
+            --big-color: #0FF;
+            --big-size: 32px;
+            
+        }
+
         /* TEXT */       /* use this formatting for commenting style!! */
         h2 {color:green;}
         h3 {color: palevioletred;}
@@ -19,8 +26,17 @@
         /* IMAGES */
         .small-image {width: 100px; height: 200px;}
         .scale-image {width: 25%; height: 25%;}
+        .link-image {
+            border-color: black;
+            border-width: 2px;
+            border-radius: 50%;
+            border-style: solid;
+            width: 100px;
+            height: 100px;}
 
         /* STYLING */ 
+        body {background-color:rgb(167, 165, 165);}
+        
         .thin-border {
             border-color: black;
             border-width: 1px; /* Nice thin border */
@@ -28,8 +44,6 @@
             border-radius: 1px;} 
             /* border radius can be 50% to make circle. */ 
             /* Great for making picutres as a nav bar or meet staff, etc */
-
-        .soft-background {background-color:rgb(167, 165, 165)}
 
         /* ID manipulation */
         #header {
@@ -41,24 +55,23 @@
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
         #article-1 {
-            color: yellow;
             background-color: orangered;
-            text-align: right;
-            margin-bottom: -10px;
-            }
+            margin-bottom: -12px;}
+
+        #article-1-title {text-align: center; color:indigo;
+            margin: bottom -1em;}
 
         #dog-picture {
             background-color: royalblue;
             text-align:center;
-            margin-top: -10px;
+            margin-top: -12px;
             padding-top: 2px;
-            padding-right: 2px;
-            }
+            padding-right: 2px;}
+
         #dogpic {
             border-width: 5px;
             border-radius: 5px;
-            border-color: peachpuff;
-        }
+            border-color: peachpuff;}
         
         
             
@@ -83,7 +96,7 @@
     
     <article id="article-1">
         <h2 id="article-1-title">This is a subheading. 2</h2>
-         <p>This is a paragraph. While simply text, this is only the beginning of a longer item. As I keep typing, I don't know how long the text can go before it wraps here.
+         <p id="article-1-text">This is a paragraph. While simply text, this is only the beginning of a longer item. As I keep typing, I don't know how long the text can go before it wraps here.
         This is a new line that I manually (/n) added. The text continues. I can keep typing and use the enter key to keep the text inside my editor window, but it will display as a block of text on the page. <em>Word Wrap</em> Also, head on down to the <a href="#links">Links section</a> below!
         </p>
     </article>
@@ -93,33 +106,46 @@
         <img id="dogpic" class="thin-border" src="images/harperdog.jpg" alt="Dog looks like Harper">
     </div>
 
-        <p>Continuing along, there is plenty to think about as I craft more of this page.
+        <p style="color: var(--big-color); font-size: var(--big-size)">
+            Continuing along, there is plenty to think about as I craft more of this page.
             The text elements are coming along nicely. The elements update because the text editor creates the close element item tab thing. <a href="http://www.panthers.com">Here</a> is a link to the Panthers webpage.
 
             Also, <a target="_blank" href="http://www.sporcle.com">let's try Sporcle</a> as a nice diversion from working so much.
         </p>
 
         <p>This <a href="#">link</a> is dead, so I can make it go somewhere later.</p>
-        </div>
 
+    <div d="picture-link">
          <!--Picture link-->
         <h3 id="picture-link"> Another picture, this time as a link!</h3>
         <p><a href="https://en.wikipedia.org/wiki/Tree"><img class="thin-border scale-image" src="images/tree.jpg" alt="A tree."></a></p>
-        
+    </div>
+
+    <div id="unordered-list">    <!--unordered list-->
         <h4 id="links">Links to stuff I enjoy. 4</h4>
-        <ul> <!--unordered list-->
+        <ul> 
             <li><a target="_blank" href="http://www.nfl.com">NFL.com</a></li>
             <li><a target="_blank" href="http://www.espn.com">ESPN.com</a></li>
             <li><a target="_blank" href="http://www.sporcle.com">Sporcle Trivia</a></li>
         </ul>
+    </div>
 
+    <div id="picture-links">  <!-- Pictures as links -->
+        <h3>Click the thumbnail to visit the site!</h3>
+            <a target="_blank" href="http://www.panthers.com"><img class="link-image" src="images/panthers-thumb.jpeg"></a>
+
+            <a tager="_blank" href="https://www.ecupirates.com"><img class="link-image" src="images/ecu-thumb.svg"></a>
+    </div>
+
+    <div id="ordered-list">  <!--ordered list"-->
         <h4 id="top-things">My top things</h4>
-        <ol> <!--ordered list"-->
+        <ol> 
             <li class="power-text"><strong>Carrie</strong></li>
             <li class="power-text"><em>Camille</em></li>
             <li>Panthers</li>
             <li>Pirates</li>
         </ol>
+    </div>
 
     <form id="personal-info-form" action="#">
         <input type="text" placeholder="First Name"> <input type="text" placeholder="Last Name">
