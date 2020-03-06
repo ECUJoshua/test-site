@@ -4,24 +4,28 @@
     <head>
         <meta charset="utf-8">
         <title>Josh's First Webpage</title>
+        <!-- This link loads the Oxanium font into this page. -->
         <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap" rel="stylesheet"> 
 
     </head>
 
     <style>
 
-        :root {
+        /*:root {
             --big-color: #0FF;
-            --big-size: 32px;
-            
-        }
+
+        }*/
 
         /* TEXT */       /* use this formatting for commenting style!! */
         h2 {color:green;}
         h3 {color: palevioletred;}
         h4 {color:slateblue; font-family: 'Oxanium', 'courier new'; font-size: 18px;}
         .power-text {color:sienna}
-        p {font-size: 12px; font-family: 'courier new';} 
+        p {font-size: 12px; font-family: 'courier new';}
+        a:hover {
+            color:rgb(200,100,50);
+            font-weight: bold;
+            text-transform: uppercase;} 
 
         /* IMAGES */
         .small-image {width: 100px; height: 200px;}
@@ -35,7 +39,7 @@
             height: 100px;}
 
         /* STYLING */ 
-        body {background-color:rgb(167, 165, 165);}
+        body {background-color:rgba(167, 165, 165, 0.4);}
         
         .thin-border {
             border-color: black;
@@ -55,7 +59,6 @@
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
         #article-1 {
-            background-color: orangered;
             margin-bottom: -12px;}
 
         #article-1-title {text-align: center; color:indigo;
@@ -73,6 +76,25 @@
             border-radius: 5px;
             border-color: peachpuff;}
         
+        #navbar {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 1.5em;
+            background-color: gainsboro;
+            font-family: 'Oxanium', 'arial';
+            color: palevioletred;}
+        nav ul {
+            margin: 5px;
+            padding: 0.25em, 5px;}
+        nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+
+        
         
             
     
@@ -84,15 +106,17 @@
     <header id="header"><strong>MY FIRST WEBPAGE (header)</strong></header>
     <h1 style="color: purple;">Welcome to my first attempt at making a webpage. 1</h1>
     
-    <!--Navigation Bar  **needs CSS**
-    <nav> 
+    
+    <nav id="navbar"> 
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Locations</a></li>
-        <li><a href="#">Contact Us</a></li>
+        <li><a href="#personal-info-form">Guest Book</a></li>
         <li><a href="#links">Links</a></li>
+        <li><a href="#mammal-form">Mammal Voting</a></li>
+        <li><a href="#food-form">Food Voting</a></li>
       </ul>  
-    </nav>-->
+    </nav>
     
     <article id="article-1">
         <h2 id="article-1-title">This is a subheading. 2</h2>
@@ -103,6 +127,7 @@
     
     <div id="dog-picture">
         <h3 id="dog-picture-title">Another subheading, a picture. 3</h3>
+        <hr>
         <img id="dogpic" class="thin-border" src="images/harperdog.jpg" alt="Dog looks like Harper">
     </div>
 
